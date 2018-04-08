@@ -1,0 +1,389 @@
+/* VARIABLES */    
+$colorWhite: #fff
+$colorBlue: #356b99
+$colorLightBlue: #aad9f2
+$colorMediumBlue: #276192
+$colorDarkBlue: #022e5d
+$colorTinyBlue: #4574a0
+$colorGrayBlue: #dae3ec
+$colorDarkYellow: #d39f0f
+$colorParrafos: rgba(0, 0, 0, 0.75)
+$fontFamily: 'Lato', sans-serif
+$fontLight: 300
+$fontBold: 700
+$fontSize: 18px
+
+/* GENERALES */
+body
+	font-family: $fontFamily
+	font-size: $fontSize
+    background-color: $colorWhite
+
+.resset
+    padding-left: 0 !important
+    padding-right: 0 !important
+
+.hide
+    display: none
+
+#mainSlide
+    .overlay
+        background: rgba(0, 0, 0, 0.5)
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: 10
+
+    .carousel-caption
+        h1,h2, h3, h4, h5, h6
+            font-size: 43px
+            line-height: 1.12;
+            font-weight: $fontBold 
+        p 
+            font-size: 20px
+            line-height: 2.15
+            font-weight: $fontLight
+
+    .carousel-indicators li
+        border: 2px solid #fff;
+
+
+/* HEADER */
+
+@media screen and (min-width: 1300px)
+    header
+        top: 2%
+        left: 1%    
+        z-index: 1
+        width: 98%
+        position: fixed
+        transition: all 0.2s ease-in-out 0s;
+
+    header.fixed
+        width: 100% !important
+        top: 0 !important
+        left: 0
+
+header
+    background: $colorMediumBlue
+     
+    .logo 
+        padding: 22px 20px
+        background: $colorDarkBlue  
+        border-bottom: 5px solid transparent
+
+    .header
+        padding: 0
+        border-bottom: 5px solid #fff 
+
+        .info-header 
+            padding: 22px
+
+        .social   
+            text-align: center   
+            margin-top: 10px     
+            i 
+                color: $colorGrayBlue
+                margin: 0 9px;
+                &:before 
+                    font-size: 1.25em
+                &:hover
+                    color: $colorDarkYellow
+
+        .search
+            text-align: center
+            margin-top: 10px
+
+            .form-control,
+            .input-group-addon
+                background: $colorTinyBlue
+                border: none
+                color: #fff
+                box-shadow: none
+
+        .ico-menu
+            background-color: $colorDarkYellow
+            color: $colorWhite
+            text-align: center
+            font-size: 32px
+
+            .txtOpen
+                text-transform: uppercase
+                font-weight: $fontBold
+                font-size: 20px
+
+            &:hover
+                cursor: pointer
+
+            i
+                margin: 32px
+       
+    nav.menu
+        position: absolute
+        right: 0
+        z-index: 100
+        width: 492px
+        background-color: $colorDarkYellow
+        box-shadow: 0px 8px 27px 0 rgba(22, 66, 125, 0.3)
+        padding: 10px 30px
+        display:none
+        font-size: 16px
+        font-weight: $fontBold
+
+        .ico-close
+            width: 45px
+            height: 45px;
+            text-align: center
+            padding: 8px 0
+            border-radius: 22.5px
+            border: solid 1px #ffffff
+            color: #fff
+
+            i 
+                font-size: 20px
+                font-weight: $fontBold
+
+            &:hover
+                cursor: pointer
+
+    .items-menu
+        margin-top: 20px
+        list-style: none
+        color: #fff
+        padding: 0
+
+        li
+            padding: 5px
+            border-bottom: 1px solid  rgba(255, 255, 255, 0.3)
+            a 
+                color: #fff
+                &:hover, &:focus, &:visited
+                    text-decoration: none
+            &:hover
+                cursor: pointer
+            &:last-child
+                border: none
+            i 
+                float: right
+                font-weight: $fontBold
+
+        .submenu
+            .second-level
+                padding: 0 25px
+
+            .third-level
+                padding-left: 20px
+
+            .third-level i
+                margin-right: 5px
+                float: none                
+
+            .second-level li,
+            .third-level li
+                border: none
+                list-style: none
+
+            .second-level li 
+                font-weight: initial
+
+            .third-level li 
+                font-weight: $fontLight
+
+@media screen and (max-width: 991px)
+    header
+        .logo
+            img 
+                margin: 0 auto
+        .header
+            .info-header
+                .logo2 
+                    img 
+                        margin: 0 auto
+        #openMenu 
+            .txtOpen
+                display: inline-block !important
+
+@media (min-width: 992px) and (max-width: 1847px)
+    header
+        .logo
+            height: 101px;
+        .header            
+            .logo2
+                max-width: 40%
+            .social
+                width: 25%
+
+
+/* BLOG */
+.section-blog
+    background: #11375a 
+    padding: 50px 0   
+
+    h3
+        padding-bottom: 10px
+        border-bottom: 2px solid #356b99
+        margin-bottom: 30px
+        color: #c2e3ff
+        font-weight: $fontBold
+
+    .post
+        background: $colorMediumBlue
+        a 
+            color: #fff
+            text-decoration: none
+
+            p.excerpt
+                font-size: 14px
+                padding: 15px
+                &:hover
+                    background: $colorDarkYellow
+
+/* INTRO CONTENT */
+.intro-content
+    padding: 60px 0
+    h3
+        padding-bottom: 10px
+        border-bottom: 2px solid $colorBlue
+        margin-bottom: 20px
+        color: $colorBlue
+        font-weight: $fontBold
+        font-size: 22px
+        width: 90%
+
+    .content
+        display: flex
+        align-items: center
+        border-bottom: 1px solid #e0e8ef
+        padding: 15px 0
+        width: 80%
+        max-width: 80%
+
+        .date,
+        .ico
+            text-align: center
+            width: 65px
+            margin-right: 20px
+
+        .day
+            font-size: 47px;
+            font-weight: $fontBold
+            color: $colorDarkYellow
+            line-height: 1.03
+            letter-spacing: 1.4px
+
+        .month
+            color: $colorBlue
+            font-size: 25px
+            font-weight: $fontBold
+            line-height: 1.04
+            letter-spacing: 0.8px
+
+        .evento,
+        .nombre
+            font-size: 22px
+            letter-spacing: 0.7px
+            line-height: 1.36
+            color: rgba(0, 0, 0, 0.75)
+            font-weight: $fontLight   
+        .ico
+            height: 76px
+
+    .view-more
+        color: $colorBlue
+        font-weight: $fontBold
+        margin-top: 30px
+        border: 2px solid $colorBlue
+        border-radius: 20px
+        padding: 10px 59px
+        text-transform: uppercase
+        transition: all 0.2s ease-in-out 0s;
+        
+        &:hover
+            background: $colorBlue
+            color: #fff
+
+/* Servicios */
+.section-servicios
+    background: #11375a;   
+    padding: 50px 0   
+
+    h3
+        font-size: 24.5px
+        letter-spacing: 0.7px
+        color: #fff
+
+    .content
+        display: flex
+        justify-content: space-between
+        width: 100%
+        margin-top: 40px
+
+        .item
+            &:hover .square 
+                border: 2px solid #fff;
+            &:hover .bg .inside
+                background: $colorMediumBlue
+            &:hover .bg .inside i 
+                color: #fff
+
+
+
+        .square
+            border: 2px solid #102d48;
+            padding: 30px 65px
+            border-radius: 3px
+            transition: all 0.2s ease-in-out 0s;
+
+            .bg
+                background: $colorLightBlue
+                border-radius: 100%
+                width: 100px
+                height: 100px
+                margin: 0 auto
+                display: flex
+                align-items: center
+
+                .inside
+                    background: #fff 
+                    text-align: center
+                    border-radius: 100%
+                    width: 80px
+                    height: 80px
+                    margin: 0 auto
+                    display: flex
+                    align-items: center
+                    justify-content: center
+                    transition: all 0.2s ease-in-out 0s;
+
+                    i
+                        font-size: 33px
+                        color: $colorDarkBlue
+            .descrip
+                text-align: center 
+                color: #fff 
+                text-transform: uppercase 
+                font-size: 15.5px 
+                letter-spacing: 0.5px
+                line-height: 1.35
+                margin-top: 20px
+
+    .consultas 
+        justify-content: center   
+        .item            
+            margin: 0 20px
+        .item a 
+            font-size: 15px
+            color: #fff
+            font-weight: $fontBold
+            &:hover 
+                text-decoration: none
+                color: $colorDarkYellow
+
+            .fa-angle-right 
+                padding: 1px 6px
+                background: $colorDarkYellow
+                border-radius: 5px
+                border: 2px solid #fff
+                margin-right: 6px
