@@ -32,7 +32,30 @@ $(document).ready(function () {
         }
     }
 
+    $('[data-fancybox="gallery"]').fancybox({
+        protect: true,
+        keyboard: true,
+        arrows: true,
+        infobar: true,
+        preload: true,
+        animationEffect: "zoom-in-out",
+        zoomOpacity: "auto",
+        transitionEffect: "circular",
+        transitionDuration: 400,
+        spinnerTpl: '<div class="fancybox-loading"></div>'
+    });
 
+    $("[data-fancybox]").fancybox({
+        iframe: {
+            css: {
+                width: '600px',
+                height: '300px',
+                maxWidth  : '80%',
+                maxHeight : '80%',
+                margin: '0'
+            }
+        }
+    });
 
 
 });

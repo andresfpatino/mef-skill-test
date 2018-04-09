@@ -12,6 +12,7 @@ $fontFamily: 'Lato', sans-serif
 $fontLight: 300
 $fontBold: 700
 $fontSize: 18px
+$assetPath : "/img/";
 
 /* GENERALES */
 body
@@ -191,6 +192,11 @@ header
             .third-level li 
                 font-weight: $fontLight
 
+
+@media screen and (max-width: 490px)
+    nav.menu 
+        padding-left: 145px !important
+
 @media screen and (max-width: 991px)
     header
         .logo
@@ -242,10 +248,11 @@ header
 
 /* INTRO CONTENT */
 .intro-content
-    padding: 60px 0
+    padding: 20px 0 60px
     h3
         padding-bottom: 10px
         border-bottom: 2px solid $colorBlue
+        margin-top: 60px
         margin-bottom: 20px
         color: $colorBlue
         font-weight: $fontBold
@@ -290,19 +297,20 @@ header
         .ico
             height: 76px
 
-    .view-more
-        color: $colorBlue
-        font-weight: $fontBold
-        margin-top: 30px
-        border: 2px solid $colorBlue
-        border-radius: 20px
-        padding: 10px 59px
-        text-transform: uppercase
-        transition: all 0.2s ease-in-out 0s;
-        
-        &:hover
-            background: $colorBlue
-            color: #fff
+.view-more
+    color: $colorBlue
+    font-weight: $fontBold
+    margin-top: 30px
+    border: 2px solid $colorBlue
+    border-radius: 20px
+    padding: 10px 59px
+    text-transform: uppercase
+    transition: all 0.2s ease-in-out 0s
+    background: transparent
+    
+    &:hover
+        background: $colorBlue
+        color: #fff
 
 /* Servicios */
 .section-servicios
@@ -316,11 +324,13 @@ header
 
     .content
         display: flex
+        flex-wrap: wrap
         justify-content: space-between
         width: 100%
         margin-top: 40px
 
         .item
+            width: 24%
             &:hover .square 
                 border: 2px solid #fff;
             &:hover .bg .inside
@@ -328,11 +338,9 @@ header
             &:hover .bg .inside i 
                 color: #fff
 
-
-
         .square
             border: 2px solid #102d48;
-            padding: 30px 65px
+            padding: 30px 40px
             border-radius: 3px
             transition: all 0.2s ease-in-out 0s;
 
@@ -372,7 +380,8 @@ header
     .consultas 
         justify-content: center   
         .item            
-            margin: 0 20px
+            margin: 15px 20px
+            width: auto
         .item a 
             font-size: 15px
             color: #fff
@@ -387,3 +396,447 @@ header
                 border-radius: 5px
                 border: 2px solid #fff
                 margin-right: 6px
+                color: #fff
+
+@media screen and (max-width: 991px)
+    .section-servicios
+        .content
+            .square
+                padding: 30px 10px;
+                .descrip
+                    font-size: 13px
+
+@media screen and (max-width: 767px)  
+    .section-servicios
+        .content
+            .item
+                width: 48%
+                .square 
+                    margin-bottom: 25px;
+        .consultas
+            .item
+                width: 100%
+
+      
+
+/* Section proyectos */
+.section-proyectos
+    h4 
+        font-size: 48.5px
+        font-weight: $fontBold
+        line-height: 1
+        color: $colorBlue
+        margin-bottom: 30px
+
+    .bg-pattern
+        background-image: url(#{$assetPath}patterndots.png)
+        padding: 80px
+
+    .shape
+        display: flex
+        justify-content: space-between
+        align-items: center
+        border: solid 2px $colorBlue
+        border-radius: 5px
+        padding: 20px 30px
+        margin-bottom: 60px
+
+        h5 
+            font-size: 23.5px
+            font-weight: $fontBold
+            color: #4a78a1
+            line-height: 1.06
+            text-transform: uppercase
+            margin: 0
+        p
+            font-size: 12.5px
+            text-transform: uppercase
+            line-height: 2
+            color: $colorDarkYellow
+            font-weight: $fontBold
+            margin: 0
+
+        .arrow
+            background-color: $colorDarkYellow
+            padding: 9px 17px
+            border-radius: 50%
+            color: #fff
+            font-size: 20px
+            font-weight: $fontBold
+            &:hover
+                cursor: pointer
+                background-color: $colorBlue
+
+    #slideProyecto
+        .carousel-control
+            top: 50%
+            background: none
+            &:hover
+                background: none
+            i
+                background: #2797e4
+                font-weight: $fontBold
+                padding: 10px 15px
+                border-radius: 50%
+    
+    .info-proyecto
+        background-color: $colorGrayBlue
+        font-size: 20px
+        line-height: 1.4
+        letter-spacing: 0.6px
+        color: rgba(45, 105, 158, 0.75)
+        padding: 42px 50px
+
+.section-transparencia
+    .info
+        padding: 147px 50px
+
+    h4 
+        font-size: 48.5px
+        font-weight: $fontBold
+        line-height: 0.71
+        color: $colorBlue
+        margin-bottom: 40px
+
+    p 
+        font-weight: $fontLight
+        line-height: 1.33
+        letter-spacing: 0.5px
+        color: rgba(0, 0, 0, 0.75)
+
+@media screen and (max-width: 490px)        
+    .section-transparencia
+        .info 
+            padding: 40px 50px
+
+.dot-list
+    list-style: none
+    font-size: 15px
+    font-weight: $fontBold
+    padding: 0
+    color: $colorBlue
+    text-transform: uppercase
+    margin-top: 30px
+    li 
+        margin-bottom: 15px        
+        &:before
+            font: normal normal normal 14px/1 FontAwesome
+            content: "\f105"
+            background: $colorDarkYellow
+            padding: 0px 5px
+            border-radius: 5px
+            margin-right: 10px
+            color: #fff
+            font-size: 15px
+
+.section-indicadores
+    background-image: url(#{$assetPath}patterndots.png)
+    padding: 100px 0
+
+    h3 
+        font-size: 23px;
+        font-weight: $fontBold
+        line-height:  2.04
+        letter-spacing: 0.7px
+        color: $colorBlue
+        margin-bottom: 20px
+
+    .indicador
+        font-size: 78.5px
+        font-weight: $fontBold
+        line-height: 1.03
+        letter-spacing: 2.4px
+        color: $colorDarkYellow
+        display: block
+        margin-top: 20px
+
+    h4
+        font-size: 78.5px
+        font-weight: $fontBold
+        line-height: 1.03
+        color: $colorBlue
+        margin: 0
+
+    p.nombre 
+        margin-top: 15px
+        font-size: 25px
+        font-weight: $fontBold
+        line-height: 1.04
+        letter-spacing:  0.8px
+        color: $colorBlue
+
+    .content
+        display: flex 
+        align-items: center
+        border-bottom: 2px solid #cad7e2
+        padding: 50px 0px;
+        &:last-child
+            border-bottom: 2px solid transparent
+        .ico
+            width: 100px
+            margin-right: 30px
+            img
+                width: 80px
+                margin: 0 auto
+        .info 
+            font-weight: $fontBold
+            p 
+                margin: 0
+                font-size: 16px
+                line-height: 0.88
+                color: $colorBlue
+
+            .cifra
+                font-size: 29px
+                line-height: 1.03
+                letter-spacing: 0.9
+                color: $colorDarkYellow
+                .decimal
+                    font-size: 15.5px
+                    line-height: 1.94
+                    letter-spacing: 0.5px
+            .moneda
+                font-size: 29px
+                line-height: 1.03
+                letter-spacing: 0.9px
+                color: $colorBlue
+
+
+@media screen and (max-width: 490px)  
+    .section-indicadores 
+        padding: 40px 50px
+        .indicador
+            font-size: 60px
+        h4 
+            font-size: 50px
+
+@media screen and (max-width: 991px)
+    .section-indicadores
+        h3, .indicador, h4, .nombre
+            text-align: center           
+        .icon
+            margin: 0 auto
+            display: block
+
+.call-to-action
+    background: #001933
+    position: relative
+    padding: 35px 0
+    margin-bottom: 70px
+    justify-content: space-between
+    p
+        color: #ffffff
+        font-size: 49px
+        font-weight: $fontBold
+        line-height: 0.82
+        letter-spacing:  1.5px
+    .container
+        display: flex 
+        justify-content: space-around
+        align-items: center
+        position: relative
+        .phone
+            position: absolute
+            left: 0
+            margin-top: -5px
+        .btn-default
+            background-color: $colorDarkYellow
+            border: none
+            color: #fff
+            font-weight: $fontBold
+            font-size: 17px
+            letter-spacing:  0.5px
+            border-radius: 25px
+            padding: 10px 40px
+            i 
+                margin-right: 5px
+                font-size: 25px
+
+@media screen and (max-width: 991px)
+    .call-to-action
+        .container
+            flex-direction: column
+            .phone
+                position: relative
+                margin-top: -90px
+                margin-bottom: 20px
+            button
+                margin: 20px 0 0
+
+.section-redes-sociales
+    background: #236698
+    padding: 50px 0
+
+    h3
+        font-size: 24.5px
+        line-height: 2.04
+        letter-spacing: 0.7px
+        color: #fff
+        font-weight: $fontBold
+    
+    .redes
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+
+        .bigPhoto
+            width: 50%
+            box-shadow: 0px 6px 10px 0 rgba(22, 66, 125, 0.11)
+            position: relative
+
+        .blockTwitter,
+        .middlePhoto
+            width: 23%
+            box-shadow: 0px 6px 10px 0 rgba(22, 66, 125, 0.11)
+            margin: 0 0px 30px
+            position: relative
+        
+        .blockTwitter
+            background-color: #4089bd
+            color: #ffffff
+            text-align: center
+            padding: 20px 35px
+            border-radius: 5px
+            display: flex
+            flex-direction: column 
+            align-items: center
+            justify-content: center
+
+            i
+                font-size: 35px
+                margin-bottom: 20px
+            .user
+                color: rgba(255, 255, 255, 0.75);
+                font-weight: $fontBold
+                font-size: 15px
+                line-height: 1.16
+                letter-spacing: 0.5px
+            .tweet
+                font-size: 14px
+                line-height: 1.29
+                color: rgba(255, 255, 255, 0.75)
+            .timeAgo
+                font-size: 12px;
+                line-height: 1.71
+                letter-spacing: 0.4px
+                color: rgba(255, 255, 255, 0.75)
+                font-weight: $fontBold
+
+
+@media screen and (max-width: 991px)
+    .section-redes-sociales
+        .redes
+            .bigPhoto
+                width: 100%
+            .blockTwitter,
+            .middlePhoto
+                width: 100%;
+                margin: 20px 0
+            .middlePhoto
+                img
+                    display: block
+                    margin: 0 auto
+
+
+footer 
+    background-image: url(#{$assetPath}patter-footer.png)
+    padding: 100px 0 0
+
+    .logos-fot
+        border-bottom: 1px solid #346a99
+        padding-bottom: 30px
+        img
+            display: inline-block
+            &:nth-child(1)
+                margin-right: 20px 
+    .preguntas
+        border-bottom: 1px solid #346a99
+        padding: 30px 0
+        .pFrecuentes
+            a
+                color: #4da8fe
+                text-transform: uppercase
+                font-size: 16.5px
+                font-weight: $fontBold
+                line-height: 1.03
+                letter-spacing: 0.5px
+                text-decoration: none
+                &:hover
+                    text-decoration: none
+
+    .redes-sociales
+        margin-bottom: 40px
+        h3 
+            font-size: 23px
+            font-weight: $fontBold
+            line-height: 2.04
+            letter-spacing: 0.7px
+            color: #ffffff
+            margin-bottom: 30px
+        a 
+            color: #fff
+            font-size: 23px
+            background: #4da8fe
+            padding: 20px 25px
+            border-radius: 50%
+            margin-right: 10px
+            &:hover
+                background: $colorDarkYellow
+
+    .contacto
+        padding: 0 40px
+        h3 
+            font-size: 23px
+            font-weight: $fontBold
+            line-height: 2.04
+            letter-spacing: 0.7px
+            color: #ffffff
+            margin-top: 0
+            margin-bottom: 30px
+
+    .legal
+        background: #02233e
+        margin-top: 30px
+        padding: 20px 0
+        text-align: center
+        color: #fff
+
+    form
+        input, select, textarea 
+            width: 100%
+            margin-bottom: 20px
+            padding: 15px 25px
+            border-radius: 25px
+            border: none
+            color: rgba(1, 38, 72, 0.48)
+            text-transform: uppercase
+            font-size: 14px
+
+        input[type=submit]
+            background : $colorDarkYellow
+            width: 30%
+            color: #ffffff
+            font-weight: $fontBold
+            &:hover
+                background: $colorBlue
+
+        textarea 
+            min-height: 100px
+            max-height: 135px
+            max-width: 100%
+            min-width: 100%
+
+@media screen and (max-width: 767px)
+    footer 
+        .logos-fot, 
+        .preguntas,
+        .redes-sociales
+            text-align: center;
+
+        .contacto
+            input[type=submit]
+                width: 100%
+        .legal 
+            font-size: 14px
+
+        
